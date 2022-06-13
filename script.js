@@ -2,7 +2,7 @@ let computerGuess;
 let userGuess = [];
 let userGuessUpdate = document.getElementById("textOutput");
 let userNumberUpdate = document.getElementById("inputBox");
-let audio = new Audio("./mixkit-game-flute-bonus-2313.wav");;
+let audio = new Audio("./mixkit-game-flute-bonus-2313 (1).wav");;
 
 const init = () => {
     computerGuess = Math.floor(Math.random() * 100);
