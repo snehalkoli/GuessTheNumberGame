@@ -2,7 +2,7 @@ let computerGuess;
 let userGuess = [];
 let userGuessUpdate = document.getElementById("textOutput");
 let userNumberUpdate = document.getElementById("inputBox");
-let audio = new Audio();
+let audio = new Audio("./mixkit-game-flute-bonus-2313.wav");;
 
 const init = () => {
     computerGuess = Math.floor(Math.random() * 100);
@@ -16,7 +16,10 @@ const startGame = () => {
 };
 //reload the page
 const newGameBegin =() =>{
+   
     window.location.reload();
+    audio.play();
+
 };
 // start new Game
 const startNewGame=() =>{
@@ -25,6 +28,7 @@ const startNewGame=() =>{
 }
 // -----------------
 const compareGuess = () => {
+    audio.play();
     const userNumber = Number(document.getElementById("inputBox").value);
     userGuess = [...userGuess, userNumber];
     document.getElementById("guesses").innerHTML = userGuess;
@@ -62,9 +66,11 @@ const compareGuess = () => {
 };
 const easyMode = () => {
     maxGuess = 10;
+    audio.play();
     startGame();
 };
 const hardMode = () => {
     maxGuess = 5;
+    audio.play();
     startGame();
 };
